@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col">
+            <h3 class="text-center text-info py-1 my-2">Cupcake Inventory</h3>
+            <ul class="cupcakes" id="cupcakes-list">
+
+            </ul>
+        
+        <h3 class="text-info text-center py-1 my-2">Add Cupcake</h3>
+        <form action="/api/cupcakes" method="POST" id="new-cupcake-form">
+            <div class="form-group">
+                <label for="flavor">Flavor</label>
+                <input class="form-control" id="form-flavor" name="flavor">
+            </div>
+            <div class="form-group">
+                <label for="size">Size</label>
+                <input class="form-control" id="form-size" name="size">
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating</label>
+                <input type="number" class="form-control" id="form-rating" name="rating">
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="url" class="form-control" id="form-image" name="image">
+            </div>
+            <button class="btn btn-info">Submit</button>
+        </form>
+
+        </div>
+        <div class="col-2"></div>
+    </div>
+        
+</div>
+
+
+
+
+
+<script src="/static/app.js"></script>
+
+
+{% endblock %}
